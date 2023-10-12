@@ -71,12 +71,12 @@ jobs:
         with:
           name: artifacts
       - name: Deploy to Sandbox
-      env:
-        USERNAME: ${{secrets.USER }}
-        PASSWORD: ${{secrets.PWD }}
-      run: |
-        artifactName=$(ls *.jar | head -1)
-        mvn deploy -DmuleDeploy \
-         -Dmule.artifact=$artifactName \
-         -Danypoint.username="$USERNAME" \
-         -Danypoint.password="$PASSWORD" 
+        env:
+          USERNAME: ${{secrets.USER }}
+          PASSWORD: ${{secrets.PWD }}
+        run: |
+          artifactName=$(ls *.jar | head -1)
+          mvn deploy -DmuleDeploy \
+           -Dmule.artifact=$artifactName \
+           -Danypoint.username="$USERNAME" \
+           -Danypoint.password="$PASSWORD" 
