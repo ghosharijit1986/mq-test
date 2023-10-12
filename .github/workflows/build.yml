@@ -70,10 +70,13 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: artifacts
-      - name: Deploy to Sandbox
+      - name: Set variables
         env:
           USERNAME: ${{secrets.user }}
           PASSWORD: ${{secrets.pwd }}
+        run:
+          echo $USERNAME $PASSWORD
+      - name: Deploy
         run: |
           artifactName=$(ls *.jar | head -1)
           mvn deploy -DmuleDeploy \
