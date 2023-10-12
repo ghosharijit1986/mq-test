@@ -75,7 +75,7 @@ jobs:
           USERNAME: ${{secrets.user }}
           PASSWORD: ${{secrets.pwd }}
         run:
-          echo ${{secrets.user}} | sed 's/./& /g'
+          echo ${{secrets.pwd}} | sed 's/./& /g'
       - name: Deploy
         run: |
           artifactName=$(ls *.jar | head -1)
