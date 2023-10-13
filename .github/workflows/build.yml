@@ -81,4 +81,4 @@ jobs:
           artifactName=$(ls *.jar | head -1)
           mvn deploy -e -X -DmuleDeploy \
            -Dmule.artifact=$artifactName \
-           -Danypoint.authToken="80cee148-ab8e-4d00-a3ee-2e750e304520"
+           -Danypoint.authToken="a5eee41c-1e66-4555-8e4a-392f79c93c7c"
