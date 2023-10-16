@@ -101,7 +101,7 @@
 	</pluginRepositories>
 	<distributionManagement>
     	<repository>
-      		<id>MQ</id>
+      		<id>anypoint-exchange-v3</id>
       		<name>MQU</name>
       		<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/6d2a14d1-6f73-429a-bb47-5349fbc3952f/maven</url>
       		<layout>default</layout>
