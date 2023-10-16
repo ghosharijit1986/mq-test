@@ -76,7 +76,7 @@
 
 	<repositories>
 		<repository>
-			<id>anypoint-exchange-v3</id>
+			<id>maven-test</id>
 			<name>Anypoint Exchange</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
@@ -102,7 +102,7 @@
 	</pluginRepositories>
 	<distributionManagement>
     	<repository>
-      		<id>anypoint-exchange-v3</id>
+      		<id>maven-test</id>
       		<name>MQU</name>
       		<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/6d2a14d1-6f73-429a-bb47-5349fbc3952f/maven</url>
       		<layout>default</layout>
