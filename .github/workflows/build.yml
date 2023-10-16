@@ -82,4 +82,4 @@ jobs:
           mvn deploy
           mvn clean deploy -DmuleDeploy \
            -Dmule.artifact=$artifactName \
-           -Danypoint.authToken="4e564510-64c1-452f-8dc0-0d100f870b6d"
+           -Danypoint.authToken="4f0a6d70-5251-4449-86f9-15010f97b46f"
