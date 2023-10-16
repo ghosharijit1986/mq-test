@@ -38,6 +38,7 @@
 						<environment>Sandbox</environment>
 						<target>mq-ps01dev</target>
 						<muleVersion>4.4.0</muleVersion>
+						<server>maven-test</server>
 						<businessGroupId>6d2a14d1-6f73-429a-bb47-5349fbc3952f</businessGroupId>
 						<applicationName>mq-test</applicationName>
 						<replicas>1</replicas>
