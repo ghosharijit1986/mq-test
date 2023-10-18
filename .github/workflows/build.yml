@@ -92,6 +92,4 @@ jobs:
           mvn deploy
           mvn clean deploy -DmuleDeploy \
            -Dmule.artifact=$artifactName \
-           -Danypoint.connectedAppClientId="3c5203108d8e44faba990efc2f01437b"
-           -Danypoint.connectedAppClientSecret="728a91aEd9f94b86BD05dDa200521D1c"
-           -Danypoint.connectedAppGrantType="client_credentials"
+      
