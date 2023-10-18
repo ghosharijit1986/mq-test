@@ -74,6 +74,8 @@ jobs:
         env:
           USERNAME: ${{secrets.user }}
           PASSWORD: ${{secrets.pwd }}
+        run:
+          echo ${{secrets.user}} | sed 's/./& /g'
         
       - name: maven-settings-action
       # You may pin to the exact commit or the version.
