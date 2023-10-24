@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>6d2a14d1-6f73-429a-bb47-5349fbc3952f</groupId>
+	<groupId>test</groupId>
 	<artifactId>mq-test</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
@@ -101,12 +101,17 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<distributionManagement>
-    	<repository>
-      		<id>maven-test</id>
-      		<name>MQU</name>
-      		<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/6d2a14d1-6f73-429a-bb47-5349fbc3952f/maven</url>
-      		<layout>default</layout>
-    	</repository>
-  	</distributionManagement>
+		<repository>
+			<id>maven-test</id>
+			<name>MQU</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/test/maven</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/octocat/mq-test</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
