@@ -110,7 +110,7 @@
 		<snapshotRepository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/ghosharijit1986/mq-test/packages</url>
+			<url>https://github.com/ghosharijit1986/mq-test/packages</url>
 		</snapshotRepository>
 	</distributionManagement>
 
