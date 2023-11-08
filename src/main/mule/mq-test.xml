@@ -5,15 +5,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="941451cc-4b07-40a9-83d0-9646c5b4b809" >
-		<http:listener-connection host="localhost" port="8081" />
+		<http:listener-connection host="${http.host}" port="${http.port}" />
 	</http:listener-config>
-	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="f0271511-7817-4d4f-8a4d-6e0035e76fca" >
-		<http:request-connection protocol="HTTPS"/>
-	</http:request-config>
 	<flow name="mq-testFlow" doc:id="e0bc9360-0c4f-4b4f-8ed2-508bb8f36016" >
 		<http:listener doc:name="Listener" doc:id="6c4a6ba8-2140-4c1c-a8f6-1f3eb940efe8" config-ref="HTTP_Listener_config" path="/mq"/>
-		<set-payload value="Hello MQ" doc:name="Set Payload" doc:id="40ce070e-d577-4640-a9d4-dc9ed7675d4c" />
-		<http:request method="POST" doc:name="Request" doc:id="d94ccb07-a228-4d53-a079-e9b5eac54175" config-ref="HTTP_Request_configuration" url="https://10.26.0.210:443"/>
+		<set-payload value="#[p('temp.name')]" doc:name="Set Payload" doc:id="40ce070e-d577-4640-a9d4-dc9ed7675d4c" />
 		<logger level="INFO" doc:name="Logger" doc:id="58ecd527-951c-43ee-b0c7-80bd689625d6" message="mq-test"/>
 	</flow>
 </mule>
